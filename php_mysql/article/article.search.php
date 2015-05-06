@@ -43,7 +43,7 @@
 	<div id="content">
 	<?php
 		if(empty($data)){	
-			echo "There isn't any article, please ask the administrator to add.";
+			echo "The article called '$key' doesn't exist, please ask the administrator to add.";
 		}else{
 			foreach($data as $value){
 	?>

@@ -1,0 +1,147 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	font: 12px Arial,宋体;
+	text-align: center;
+}
+
+#container {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 400px;
+	height: 370px;
+	margin-left: -200px;
+	margin-top: -200px;
+	border: 3px solid gray;
+	text-align: left;
+}
+
+#header{
+	width:385px !important;
+	width:400px;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+	color: white;
+	font: bold;
+	padding-left: 15px;
+	/* background:url(../images/title.png) no-repeat right ; */
+	background: gray;
+	float: left;
+
+}
+
+#content{
+	padding: 0;
+	width: 400px;
+	height: 340px;
+	float: left;
+	background: #f5f5f5;
+
+}
+
+#content #menu{
+	float: left;
+	width: 100%;
+
+}
+
+ul{
+	margin: 0 0 0 10px;
+	padding: 0px;
+}
+#content #menu li{
+	float: left;
+	height: 25px;
+	line-height: 25px;
+
+}
+
+#menu a {
+	color: black;
+	text-decoration: none;
+	text-align: left;
+}
+
+#menu a:hover{
+	position: relative;
+	top: 1px;
+	left: 1px;
+}
+
+#content #menu .divi{
+	float: left;
+	background: #f5f5f5;
+	width: 20px;
+	height: 25px;
+	overflow: hidden;
+
+}
+
+#display{
+	float: left;
+	margin: 10px 20px;
+	width: 360px;
+	height: 35px;
+	border:1px solid gray;
+	text-align: right;
+	font-size: 18px;
+}
+
+#firstline{
+	float: left;
+	margin-top: 6px;
+}
+
+#firstline #square{
+	float: left;
+	margin-top: 1px;
+	margin-left: 26px;
+	margin-right: 26px;
+	width: 35px;
+	height: 35px;
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+	border-bottom: 2px solid white;
+	border-right: 2px solid white;
+}
+
+.button{
+	float: left;
+	height: 35px;
+	background: -ms-linear-gradient(top, #ffffff,  #c0c8d0);        /* IE 10 */
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#c0c8d0));      /* Safari 4-5, Chrome 1-9*/
+	background: -webkit-linear-gradient(top, #ffffff, #c0c8d0);   /*Safari5.1 Chrome 10+*/
+	background: -o-linear-gradient(top, #ffffff, #c0c8d0);  /*Opera 11.10+*/
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius: 5px;
+	border: 1px solid gray;
+	text-align: center;
+	font-size: 14px;
+	line-height: 35px;
+}
+
+.big{
+	width: 80px;
+	margin-right: 20px;
+	color: red;
+
+}
+
+.commonline{
+	float: left;
+	margin-top: 12px;
+	margin-left: 20px;
+}
+
+.small{
+	width: 50px;
+	margin-right: 10px;
+	color: blue;
+}
+
+#red{
+	color: red;
+}

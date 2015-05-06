@@ -4,7 +4,7 @@ require_once('mysqli_connect.php');
 
 // Create a query for the database
 $query = "SELECT first_name, last_name, email, street, city, state, zip,
-phone, birth_date FROM student";
+phone, birth_date, student_id FROM student";
 
 // Get a response from the database by sending the connection
 // and the query
@@ -23,11 +23,13 @@ echo '<table align="left" cellspacing="5" cellpadding="8">
 <td align="left"><b>State</b></td>
 <td align="left"><b>Zip</b></td>
 <td align="left"><b>Phone</b></td>
-<td align="left"><b>Birth Day</b></td></tr>';
+<td align="left"><b>Birth Day</b></td>
+<td align="left" colspan="2"><b>Operation</b></td></tr>';
 
 // mysqli_fetch_array will return a row of data from the query
 // until no further data is available
 
+//if($response && mysql_num_rows($response){})
 while($row = mysqli_fetch_array($response)){
 
 
@@ -40,7 +42,9 @@ $row['city'] . '</td><td align="left">' .
 $row['state'] . '</td><td align="left">' .
 $row['zip'] . '</td><td align="left">' . 
 $row['phone'] . '</td><td align="left">' .
-$row['birth_date'] . '</td>';
+$row['birth_date'] . '</td>'.
+'<td align="left"><a href="deletestudent.php?id='.$row['student_id'].'">Delete</a> </td>'.
+ '<td align="left"><a href="modifystudent.php?id='.$row['student_id'].'">Modify</a></td>';
 
 echo '</tr>';
 }

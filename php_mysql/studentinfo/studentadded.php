@@ -168,11 +168,13 @@ if(isset($_POST['submit'])){
         
         if($affected_rows == 1){
             
-            echo 'Student Entered';
+            /*echo 'Student Entered';*/
             
             mysqli_stmt_close($stmt);
             
             mysqli_close($dbc);
+            echo "<script>alert('Add successfully! :)');";
+            echo "window.location.href='getstudentinfo.php';</script>";
             
         } else {
             
@@ -189,76 +191,13 @@ if(isset($_POST['submit'])){
         
         echo 'You need to enter the following data<br />';
         
-        foreach($data_missing as $missing){
-            
-            echo "$missing<br />";
-            
-        }
-        
-    }
+            foreach($data_missing as $missing){
+                
+                echo "$missing<br />";   
+            }
+        echo '<input type="button" name="add" value="Redo" onclick="window.location.href='."'addstudent.php'".'" />';
     
+        }
 }
 
 ?>
-
-<form action="http://localhost/php1/studentadded.php" method="post">
-    
-    <b>Add a New Student</b>
-    
-    <p>First Name:
-<input type="text" name="first_name" size="30" value="" />
-</p>
-
-<p>Last Name:
-<input type="text" name="last_name" size="30" value="" />
-</p>
-
-<p>Email:
-<input type="text" name="email" size="30" value="" />
-</p>
-
-<p>Street:
-<input type="text" name="street" size="30" value="" />
-</p>
-
-<p>City:
-<input type="text" name="city" size="30" value="" />
-</p>
-
-<p>State (2 Characters):
-<input type="text" name="state" size="30" maxlength="2" value="" />
-</p>
-
-<p>Zip Code:
-<input type="text" name="zip" size="30" maxlength="5" value="" />
-</p>
-
-<p>Phone Number:
-<input type="text" name="phone" size="30" value="" />
-</p>
-
-<p>Birth Date (YYYY-MM-DD):
-<input type="text" name="birth_date" size="30" value="" />
-</p>
-
-<p>Sex (M or F):
-<input type="text" name="sex" size="30" maxlength="1" value="" />
-</p>
-
-<p>Lunch Cost:
-<input type="text" name="lunch" size="30" value="" />
-</p>
-
-<div>
-<p style="float:left;">
-<input type="submit" name="submit" value="Send" />
-</p>
-
-<p style="float:left;">
-<input type="button" name="return" value="Show" />
-</p>
-</div>
-    
-</form>
-</body>
-</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questionnaire title="New arrival!" description="Do you want to try?">
+	<question number="1"> 
+		<title>Which of the following roles isn't in the movies 'Avengers: Age of Ultron'?</title> 
+		<options>	
+			<A>Thor</A> 
+			<B>Vision</B> 
+			<C>Loki</C> 
+			<D>Iron Man</D> 
+		</options>
+		<answer>C</answer> 
+	</question>
+	<question number="2"> 
+		<title>Which of the following songs doesn't belong to Michael Jackson?</title> 
+		<options>
+			<A>You Are Not Alone</A> 
+			<B>Beat it</B> 
+			<C>Complicated</C> 
+			<D>Dangerous</D> 
+		</options>
+		<answer>C</answer> 
+	</question>
+	<question number="3"> 
+		<title>What's the color of sky?</title>
+		<options> 
+			<A>Blue</A> 
+			<B>Pink</B> 
+			<C>Gray</C> 
+			<D>Green</D> 
+		</options>
+		<answer>A</answer> 
+	</question>
+</questionnaire>

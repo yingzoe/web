@@ -27,7 +27,7 @@
     app.directive("articleAbout", function() {
       return {
         restrict: 'E',
-        templateUrl: "article-About.html"
+        templateUrl: "article-about.html"
       };
     });
     app.directive("articleContact", function() {

@@ -27,17 +27,11 @@
 		<h1><a href="#">PHP & MySQL<sup></sup></a></h1>
 		<h2></h2>
 	</div>
-	<div id="menu">
-		<ul>
-			<li class="active"><a href="article.list.php">Articles</a></li>
-			<li><a href="about.php">About Us</a></li>
-			<li><a href="contact.php">Contact Us</a></li>
-		</ul>
-	</div>
+	
 </div>
 <!-- end header -->
 </div>
-
+<article-tabs></article-tabs>
 <!-- start page -->
 <div id="page">
 	<!-- start content -->

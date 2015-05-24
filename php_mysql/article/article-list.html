@@ -1,0 +1,15 @@
+<!-- start page -->
+<div id="page" ng-controller='articleCtrl' ng-show="tab.isSet(1)">
+	<!-- start content -->
+	<div id='content' ng-repeat="a in articles"> 
+		<div class="post">
+			<h1 class="title">{{ a.title }}<span style="color:#ccc;font-size:14px;">　　Author:{{ a.author }}</span></h1>
+			<div class="entry" >
+				{{ a.description }}
+				<!-- <p ng-bind-html-unsafe="a.description"></p> -->
+			</div>
+			<div class="meta">
+				<p class="links"><a href="article.show.php?id={{ a.id }}" class="more">See details</a>&nbsp;&nbsp;&raquo;&nbsp;&nbsp;</p>
+			</div>
+		</div>
+	</div>

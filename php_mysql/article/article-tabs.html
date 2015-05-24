@@ -1,0 +1,18 @@
+
+	<div  id="menu" class="nav nav-pills">
+		<ul>
+			<li ng-class="{ active:tab.isSet(1) }">
+				<a ng-click="tab.setTab(1)">Articles</a></li>
+			<li ng-class="{ active:tab.isSet(2) }">
+				<a ng-click="tab.setTab(2)">About Us</a></li>
+			<li ng-class="{ active:tab.isSet(3) }">
+				<a ng-click="tab.setTab(3)">Contact Us</a></li>
+		</ul>
+	</div>
+
+
+
+	<article-list ng-show="tab.isSet(1)" ></article-list>
+	<article-about ng-show="tab.isSet(2)" ></article-about>
+	<article-contact ng-show="tab.isSet(3)" ></article-contact>
+

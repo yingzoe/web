@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>q1</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=uft-8" >
+		<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+		<link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css"/>
+		<!--[if IE]>
+			<link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="header">BANNERMAN</div>
+			<div id="content">
+				<div id="checkin">Checkin</div>
+				<div class="sec">
+					<div id="card1" class="card" onclick="getLocation()">
+						<div class="front">Click to checkin!</div>
+							<div class="back" id="location"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			let btn = document.getElementById("card1");
+			let loc = document.getElementById("location");
+			let c = 0;
+			
+			function getLocation(){
+				geolocation().then(function(){
+					flip();
+				});
+			}
+			
+			function flip(){
+				if (c++ % 2 == 0) {
+			        btn.classList.add('flip');
+			    } else {
+			        btn.classList.remove('flip');
+			    }
+			}
+
+			function geolocation(){
+				return new Promise(function( resolve, reject ){
+					if (navigator.geolocation) {
+				        resolve(navigator.geolocation.getCurrentPosition(showPosition));
+				    } else {
+				    	let error = new Error("Geolocation is not supported by this browser.");
+				        reject(error);
+				    }
+				});
+			}
+
+			function showPosition(position) {
+			    loc.innerHTML = `Well done!<br />lat: ${position.coords.latitude}, lon: ${position.coords.longitude}`; 
+			}
+		</script>
+	</body>
+</html>

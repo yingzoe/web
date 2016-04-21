@@ -131,18 +131,9 @@ body {
   transform-style: preserve-3d;
   -webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
+  cursor: pointer;
 }
-
 /* line 80, ../sass/screen.scss */
-.sec {
-  width: 300px;
-  height: 40px;
-  position: relative;
-  margin-top: 20px;
-  margin-left: 50px;
-}
-
-/* line 88, ../sass/screen.scss */
 .card div {
   display: block;
   height: 100%;
@@ -156,9 +147,15 @@ body {
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-
-/* line 105, ../sass/screen.scss */
-.card.flip {
+/* line 97, ../sass/screen.scss */
+.card .front {
+  background-color: black;
+  line-height: 40px;
+}
+/* line 102, ../sass/screen.scss */
+.card .back {
+  background-color: red;
+  line-height: 20px;
   -webkit-transform: rotateX(180deg);
   -moz-transform: rotateX(180deg);
   -o-transform: rotateX(180deg);
@@ -166,15 +163,16 @@ body {
 }
 
 /* line 112, ../sass/screen.scss */
-.card .front {
-  background-color: black;
-  line-height: 40px;
+.sec {
+  width: 300px;
+  height: 40px;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 50px;
 }
 
-/* line 117, ../sass/screen.scss */
-.card .back {
-  background-color: red;
-  line-height: 20px;
+/* line 120, ../sass/screen.scss */
+.flip {
   -webkit-transform: rotateX(180deg);
   -moz-transform: rotateX(180deg);
   -o-transform: rotateX(180deg);

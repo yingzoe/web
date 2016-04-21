@@ -75,6 +75,38 @@ body{
     transform-style: preserve-3d;
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
+    cursor: pointer;
+
+    div{
+		display: block;
+	    height: 100%;
+	    width: 100%;
+		position: absolute;
+
+		color: white;
+		font: {
+			size: 14px;
+			weight: 600;
+		};
+	    -webkit-backface-visibility: hidden;
+	    -moz-backface-visibility: hidden;
+	    -o-backface-visibility: hidden;
+	    backface-visibility: hidden;
+	}
+
+	.front {
+		background-color: $border-color;
+		line-height: 40px;
+	}
+
+	.back {
+		background-color: red;
+		line-height: 20px;
+		-webkit-transform: rotateX( 180deg );
+	    -moz-transform: rotateX( 180deg );
+	    -o-transform: rotateX( 180deg );
+	    transform: rotateX( 180deg );
+	}
 }
 
 .sec {
@@ -85,39 +117,8 @@ body{
     margin-left: ($container-width - $button-width)/2;
 }
 
-.card div{
-	display: block;
-    height: 100%;
-    width: 100%;
-	position: absolute;
-
-	color: white;
-	font: {
-		size: 14px;
-		weight: 600;
-	};
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.card.flip {
+.flip {
     -webkit-transform: rotateX( 180deg );
-    -moz-transform: rotateX( 180deg );
-    -o-transform: rotateX( 180deg );
-    transform: rotateX( 180deg );
-}
-
-.card .front {
-	background-color: $border-color;
-	line-height: 40px;
-}
-
-.card .back {
-	background-color: red;
-	line-height: 20px;
-	-webkit-transform: rotateX( 180deg );
     -moz-transform: rotateX( 180deg );
     -o-transform: rotateX( 180deg );
     transform: rotateX( 180deg );

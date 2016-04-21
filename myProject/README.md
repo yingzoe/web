@@ -10,7 +10,7 @@ Requirements:
 
 	* ES6
 
-	* external libraries
+	* No external libraries
 
 	* Use Promises
 
